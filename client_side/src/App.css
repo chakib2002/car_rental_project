@@ -1,12 +1,20 @@
 .App {
   text-align: center;
 }
-
+.shadow-effect {
+  text-shadow: 10px 5px 4px #8ca1a5;
+}
+.button {
+  width: 80%;
+}
+.item {
+  font-size: 20px;
+  text-decoration: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -25,9 +33,8 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #000000;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
