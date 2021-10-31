@@ -21,8 +21,19 @@ const Rent = async(client_first_name, client_last_name, client_phone_number, cli
   }
 }
 
+const Models = async(data)=>{
+  let arr = []
+  data.forEach(() => arr.push('?'))
+  try {
+    result = await DB.query('SELECT model, model_image FROM models WHERE model IN ('+ arr.join(',') +') ;', data)
+    return result
+  } catch (error) {
+    throw error
+  }
+}
 
 
 
 
-module.exports={Search, Rent}
+
+module.exports={Search, Rent, Models}

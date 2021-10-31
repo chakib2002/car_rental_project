@@ -1,6 +1,6 @@
 import React from 'react'
 import "react-datepicker/dist/react-datepicker.css";
-import Mercedes from '../assets/S500-white-background-2.jpg'
+import Mercedes from '../img/S500-white-background-2.jpg'
 
 export default function Layout({showDates, setShowDates}) {
     return (
@@ -17,11 +17,7 @@ export default function Layout({showDates, setShowDates}) {
                                            d-none d-sm-block
                                            d-sm-none d-md-block
                                            d-md-none d-lg-block'  alt={Mercedes} />
-
         </div>
-
-        
         </div>
-        
     )
 }

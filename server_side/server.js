@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const {Search, Rent} = require('./Api/queries')
+const {Search, Rent, Models} = require('./Api/queries')
 
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
@@ -17,8 +17,19 @@ app.patch('/search', async(req, res, next)=>{
     res.status(200).send(data)
   })
   .catch((err)=>{
-    res.status(200).send({error : 'an error has occured we are sorry, try again'})
+    res.sendStatus(500)
     throw err
+  })
+})
+
+app.patch('/getMarksImg', async(req, res, next)=>{
+  const array = req.body.marks;
+  await Models(array)
+  .then((data)=>{
+    res.status(200).send(data)
+  })
+  .catch((err)=>{
+    res.status(500).send({message: 'Internal Server error'+ err})
   })
 })
 
