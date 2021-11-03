@@ -1,17 +1,40 @@
 ul {
   list-style-type: none;
 }
-li {
-  list-style-type: none;
+
+li.pointer {
+  cursor: pointer;
+}
+li:hover {
+  color: blue;
+  font-size: 20px;
+}
+li:active {
+  color: blue;
+  font-size: 20px;
 }
 .App {
   text-align: center;
+}
+.App-end {
+  text-align: end;
+}
+.bg-cars {
+  background-color: #e8e8e8;
+}
+
+.carlist {
+  margin-left: 35px;
 }
 .shadow-effect {
   text-shadow: 10px 5px 4px #8ca1a5;
 }
 .button {
   width: 80%;
+}
+.positionBtn {
+  position: relative;
+  left: 16vw;
 }
 .brands {
   font-size: 60px;
@@ -27,6 +50,7 @@ li {
 .inline {
   display: inline;
 }
+
 .DateInput {
   width: 30%;
   border: 0;
@@ -36,11 +60,19 @@ li {
   opacity: 30%;
   letter-spacing: 0.4em;
 }
+.opacity1 {
+  opacity: 90%;
+  letter-spacing: 0.1em;
+}
 .image {
   width: 15vw;
   height: auto;
   display: block;
   margin: auto;
+}
+.carImage {
+  width: auto;
+  height: 150px;
 }
 @media only screen and (max-width: 600px) {
   .inline {
@@ -51,6 +83,9 @@ li {
   }
   .DateInput {
     width: 80%;
+  }
+  .App-end {
+    text-align: center;
   }
 }
 @media (prefers-reduced-motion: no-preference) {

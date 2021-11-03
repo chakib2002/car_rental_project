@@ -40,7 +40,7 @@ export default function Brands({availableCars, models, loaded, filterCars, displ
       };
     return (
         <div>
-            <div className="display-3 text-info fw-bold App mt-5 pt-2 pb-2 opacity">SELECT YOUR CAR</div>
+            <div className="display-3 text-light fw-bold App  p-5  bg-secondary container mt-2 rounded ">SELECT YOUR CAR</div>
             {!loaded ? 
             <p className="App">Loading</p>
                 :
@@ -49,16 +49,16 @@ export default function Brands({availableCars, models, loaded, filterCars, displ
            { models && models.map((e)=>
                 <div key={e.model} className="mt-5 border-start "> 
                   <ul>
-                    <li data-id={e.model} onClick={(e)=>filterCars(e)} >
+                    <li data-id={e.model} onClick={(e)=>filterCars(e)} className='pointer' >
                       <img src={e.model_image} alt="" className='image'/>
                     </li>
                   </ul>
                 </div>
             )}
             </Slider>
-            {!display && <div className='text-center mt-5 p-3 fs-1 fw-bold text-muted '>
+            <div className='text-center mt-5 p-3 fs-1 fw-bold border-start border-5 border-secondary text-secondary'>
               CHOOSE A CAR BRAND
-              </div>}
+              </div>
             </div>
             }
         </div>

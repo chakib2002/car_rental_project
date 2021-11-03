@@ -33,8 +33,8 @@ app.patch('/getMarksImg', async(req, res, next)=>{
   })
 })
 
-app.post('/rent/:id', async (req, res, next)=>{
-  const id = req.params.id
+app.post('/rent/:carId', async (req, res, next)=>{
+  const carId = req.params.carId
   await Rent(req.body.client_first_name,
     req.body.client_last_name,
     req.body.client_phone_number,
@@ -42,7 +42,7 @@ app.post('/rent/:id', async (req, res, next)=>{
     req.body.id_card_number,
     req.body.pickUp_date,
     req.body.return_date,
-    id)
+    carId)
     .then(()=>{res.status(200).send({message :"Demand submitted"})})
     .catch(()=>res.status(500).send({message : "an error has occured, Please make another demand"}))
 

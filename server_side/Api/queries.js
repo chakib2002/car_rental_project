@@ -4,7 +4,7 @@ const DB = require ('../Database_config/DB')
 
 const Search = async(pickup)=>{
   try {
-    const result = await DB.query('START TRANSACTION; UPDATE cars SET rent_id = ?, pickUp_date = ?, return_date = ? WHERE return_date <= now() ; SELECT id, models_model, car_name, engine, power, price, image_path FROM cars  WHERE rent_id is ?  OR return_date <= ?   ; COMMIT ;' ,[null, null, null, null,pickup])
+    const result = await DB.query('START TRANSACTION; UPDATE cars SET rent_id = ?, pickUp_date = ?, return_date = ? WHERE return_date <= now() ; SELECT id, models_model, car_name, places, car_type, engine, power, price, image_path FROM cars  WHERE rent_id is ?  OR return_date <= ?   ; COMMIT ;' ,[null, null, null, null,pickup])
     return result[2]
     
   } catch (error) {

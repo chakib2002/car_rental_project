@@ -8,7 +8,7 @@ export default function Layout({showDates, setShowDates}) {
         <div className="d-flex justify-content-around">
             <div>
                 <h1 className='display-5 text-primary fw-bold mt-5 pt-5 shadow-effect'>Rcars</h1>
-                <h1 className="display-3 fw-bold dark">Luxury <br/>Car Rental </h1>
+                <h1 className="display-3 fw-bold text text-dark opacity1">Luxury <br/>Car Rental </h1>
                 <button type="button" className="btn btn-outline-primary btn-lg mt-3 fw-bold button rounded-pill" onClick={()=>setShowDates(!showDates)} >
                     Rent a car
                 </button>
